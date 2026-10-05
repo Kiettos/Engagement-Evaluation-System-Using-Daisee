@@ -2,7 +2,10 @@
 DAiSEE/
 venv/
 venv312/
-data/
+
+data/processed/val_retest
+data/processed/val_retest2
+data/processed/val_retest3
 outputs/models/
 outputs/models_tuned/
 outputs/models_tuned2/
@@ -20,3 +23,4 @@ video/
 app_test.py
 train_models.py
 tune_models.py
+Style Transfer.txt

@@ -13,9 +13,9 @@ import mediapipe as mp
 
 mp_face_mesh = mp.solutions.face_mesh
 
-# ---------------------------------------------------------------------
 # Landmark index co dinh cua MediaPipe Face Mesh (khong doi, luon giong nhau)
-# ---------------------------------------------------------------------
+
+
 LEFT_EYE = [33, 160, 158, 133, 153, 144]     # 6 diem quanh mat trai
 RIGHT_EYE = [362, 385, 387, 263, 373, 380]   # 6 diem quanh mat phai
 MOUTH = [61, 291, 39, 181, 0, 17]            # 6 diem quanh mieng
@@ -25,9 +25,8 @@ LEFT_EAR_PT = 234
 RIGHT_EAR_PT = 454
 
 
-# =======================================================================
 # STAGE 2 — Cong thuc tinh feature hinh hoc tu landmark (per frame)
-# =======================================================================
+
 
 def calculate_ear(landmarks, eye_indices):
     """
@@ -82,9 +81,8 @@ def extract_frame_features(landmarks):
     return {"ear": ear, "mar": mar, "yaw": yaw, "pitch": pitch}
 
 
-# =======================================================================
 # STAGE 3 — Nen (aggregate) chuoi feature theo thoi gian
-# =======================================================================
+
 
 def aggregate_sequence(values: list) -> dict:
     """
@@ -106,10 +104,8 @@ def aggregate_sequence(values: list) -> dict:
     }
 
 
-# =======================================================================
-# HAM CHINH — Gop Stage 1 + 2 + 3, chay tren 1 video, tra ve 1 dict duy nhat
-# =======================================================================
 
+# HAM CHINH — Gop Stage 1 + 2 + 3, chay tren 1 video, tra ve 1 dict duy nhat
 # QUAN TRONG: khoi tao FaceMesh 1 LAN DUY NHAT o muc module (khong nam trong ham),
 # de dung lai cho toan bo video thay vi load lai model moi lan goi ham.
 # Neu khoi tao lai trong moi lan goi extract_video_features(), voi ~9000 video se
@@ -186,10 +182,8 @@ def extract_video_features(video_path: str, sample_fps: int = 3, max_frames: int
 
     return output
 
-
-# =======================================================================
 # CHAY THU TRUC TIEP FILE NAY (khong qua notebook) — vi du 1 video
-# =======================================================================
+
 if __name__ == "__main__":
     import sys
 

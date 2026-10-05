@@ -11,10 +11,7 @@ from extract_features import extract_video_features
 warnings.filterwarnings("ignore", category=UserWarning, module='google.protobuf.symbol_database')
 
 def build_video_index(videos_dir: Path) -> dict:
-    """
-    Quét toàn bộ thư mục ĐÚNG 1 LẦN DUY NHẤT trước khi chạy.
-    Trả về dictionary map giữa clip_stem (ClipID) và đường dẫn file thực tế.
-    """
+
     print(f"Đang lập chỉ mục các file video trong {videos_dir}...")
     video_index = {}
     
