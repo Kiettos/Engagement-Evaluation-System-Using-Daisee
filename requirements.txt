@@ -2,7 +2,8 @@ customtkinter
 opencv-python
 Pillow
 joblib
-mediapipe
+mediapipe==0.10.9
+
 numpy
 scikit-learn
 xgboost

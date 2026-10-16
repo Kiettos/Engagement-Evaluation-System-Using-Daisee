@@ -1,5 +1,5 @@
 .vscode/
-DAiSEE/
+
 venv312/
 unuse/
 
@@ -10,10 +10,9 @@ unuse/
 train_models.py
 show_matrix.py
 tune_models.py
-video/
+
 app_test.py
 train_models.py
 tune_models.py
 Style Transfer.txt
 
-Machine Learning/
